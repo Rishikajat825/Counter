@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Cunter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Counter <em>App</em></h2>
+    <div class="btn-container">
+    <button onclick="add()">+</button>
+    <h1>0</h1>
+    <button onclick="sub()">-</button>
+    </div>
+    <button onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        const h1 = document.querySelector("h1");
+        let counter = 0;
+        function add(){
+            counter += 1;
+            h1.innerText = counter;
+        }
+        function sub(){
+            if(counter > 0){
+                counter -= 1;
+            }
+            h1.innerText = counter;
+        }
+        function reset(){
+            counter = 0;
+            h1.innerText = counter;
+        }
+        
+    </script>
+
+</body>
+</html>
